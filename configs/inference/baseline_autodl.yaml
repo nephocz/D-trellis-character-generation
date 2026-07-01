@@ -1,0 +1,35 @@
+experiment_name: "exp001_baseline_single_image"
+
+model:
+  name: "microsoft/TRELLIS.2-4B"
+  device: "cuda"
+
+paths:
+  input_dir: "/root/autodl-tmp/input"
+  output_dir: "/root/autodl-tmp/output"
+  envmap: "/root/TRELLIS.2/assets/hdri/forest.exr"
+
+input:
+  extensions:
+    - ".png"
+    - ".jpg"
+    - ".jpeg"
+    - ".webp"
+    - ".bmp"
+
+output:
+  export_video: true
+  export_glb: true
+  skip_existing: true
+  extension_webp: false
+
+render:
+  fps: 15
+
+mesh:
+  simplify_faces: 16777216
+  decimation_target: 1000000
+  texture_size: 4096
+  remesh: true
+  remesh_band: 1
+  remesh_project: 0

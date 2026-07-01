@@ -1,0 +1,197 @@
+```gitignore
+# ============================================================
+# Python cache
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# ============================================================
+# Virtual environments
+# ============================================================
+
+.venv/
+venv/
+env/
+ENV/
+conda_env/
+*.egg-info/
+
+# ============================================================
+# Jupyter cache
+# ============================================================
+
+.ipynb_checkpoints/
+
+# ============================================================
+# IDE / editor
+# ============================================================
+
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ============================================================
+# OS files
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# Logs / experiment tracking
+# ============================================================
+
+*.log
+logs/
+wandb/
+tensorboard/
+runs/
+
+# ============================================================
+# AutoDL / local runtime folders
+# ============================================================
+
+autodl-tmp/
+input/
+output/
+outputs/
+results/
+checkpoints/
+tmp/
+temp/
+
+# ============================================================
+# Model weights / checkpoints
+# ============================================================
+
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+*.bin
+*.onnx
+*.engine
+
+# ============================================================
+# Hugging Face / model cache
+# ============================================================
+
+huggingface/
+hf_cache/
+.cache/huggingface/
+
+# ============================================================
+# Dataset / processed data
+# ============================================================
+
+local_datasets/
+datasets/
+raw_assets/
+processed_assets/
+processed_glb/
+trellis_dataset/
+
+# ============================================================
+# 3D model files
+# ============================================================
+
+*.glb
+*.gltf
+*.fbx
+*.obj
+*.vrm
+*.blend
+*.usd
+*.usdz
+*.stl
+*.ply
+
+# ============================================================
+# Images
+# Ignore all image files for now, including model input images,
+# preview images, screenshots, generated figures, and texture maps.
+# ============================================================
+
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.bmp
+*.tiff
+*.tif
+*.exr
+*.hdr
+
+# ============================================================
+# Videos
+# ============================================================
+
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.gif
+
+# ============================================================
+# Archives / compressed files
+# ============================================================
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ============================================================
+# TRELLIS intermediate outputs
+# ============================================================
+
+mesh_dumps/
+pbr_dumps/
+shape_latents/
+pbr_latents/
+renders_cond/
+latents/
+voxels/
+o_voxel_cache/
+
+# ============================================================
+# Keep code, configs, docs, and metadata
+# ============================================================
+
+!README.md
+!LICENSE
+!.gitignore
+!.gitattributes
+!.editorconfig
+
+!configs/
+!configs/**/*.yaml
+!configs/**/*.yml
+
+!scripts/
+!scripts/**/*.py
+!scripts/**/*.sh
+
+!docs/
+!docs/**/*.md
+!docs/**/*.csv
+
+!data/
+!data/**/*.md
+!data/**/*.csv
+
+!requirements.txt
+!environment.yml
+```
