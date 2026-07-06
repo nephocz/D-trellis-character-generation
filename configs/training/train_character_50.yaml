@@ -1,0 +1,36 @@
+experiment_name: "exp001_self50_character_finetune"
+
+project:
+  name: "trellis-character-generation"
+  stage: "small_scale_finetune"
+
+dataset:
+  name: "AnimeCharacterSelf50"
+  root_dir: "/root/autodl-tmp/trellis_character_data/trellis_dataset"
+  metadata: "/root/autodl-tmp/trellis_character_data/trellis_dataset/metadata.csv"
+  train_split: "train"
+  val_split: "val"
+  num_assets: 50
+
+model:
+  base_model: "microsoft/TRELLIS.2-4B"
+  target: "shape"
+  device: "cuda"
+
+training:
+  batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.00001
+  max_steps: 500
+  save_every: 100
+  eval_every: 100
+  num_workers: 2
+  precision: "bf16"
+
+output:
+  output_dir: "/root/autodl-tmp/trellis_runs/exp001_self50_character_finetune"
+  checkpoint_dir: "/root/autodl-tmp/trellis_runs/exp001_self50_character_finetune/checkpoints"
+  log_dir: "/root/autodl-tmp/trellis_runs/exp001_self50_character_finetune/logs"
+
+notes:
+  description: "First 50 self-generated anime character GLB assets. Goal is to verify training pipeline and small-scale domain adaptation."
